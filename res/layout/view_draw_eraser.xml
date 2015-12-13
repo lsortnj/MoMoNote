@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/draw_setting_bg"
+    android:padding="15dp" >
+
+    <SeekBar
+        android:id="@+id/view_draw_eraser_seekbar_stroke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view_draw_eraser_stroke_area"
+        android:layout_alignParentTop="false"
+        android:layout_alignTop="@+id/view_draw_eraser_stroke_area"
+        android:layout_toRightOf="@+id/view_draw_eraser_stroke_area"
+        android:max="60"
+        android:progress="26"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seekbar_thumb" />
+
+    <LinearLayout
+        android:id="@+id/view_draw_eraser_btn_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_draw_eraser_stroke_area"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+
+     <FrameLayout
+         android:id="@+id/view_draw_eraser_stroke_area"
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+         android:layout_alignParentLeft="true"
+         android:layout_marginTop="50dp" >
+        
+         <mo.pay.post_it.widget.MomoStrokeView
+	        android:id="@+id/view_draw_eraser_img_stroke"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:layout_gravity="center"/>
+        
+   </FrameLayout>
+    
+   
+
+</RelativeLayout>

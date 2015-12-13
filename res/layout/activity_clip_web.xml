@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/clip_web_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+
+		<RelativeLayout
+		    android:id="@+id/clip_web_tool_area"
+		    android:layout_width="match_parent"
+		    android:layout_height="65dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:background="@drawable/top_area_bg_edit" >
+
+		    <RelativeLayout
+		        android:id="@+id/clip_web_tool_icon_area"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true" >
+
+			<RelativeLayout
+			    android:id="@+id/clip_web_browse_mode_tool_area"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentTop="true"
+			    android:visibility="visible" >
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_start_clip"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignTop="@+id/clip_web_btn_input_url"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/button_crop" />
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_input_url"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignTop="@+id/clip_web_btn_bookmark"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:layout_toLeftOf="@+id/clip_web_btn_bookmark"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/button_url" />
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_pagenext"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignTop="@+id/clip_web_btn_input_url"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:layout_toLeftOf="@+id/clip_web_btn_input_url"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/button_pagenext" />
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_pageback"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignTop="@+id/clip_web_btn_pagenext"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:layout_toLeftOf="@+id/clip_web_btn_pagenext"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/button_pageback" />
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_bookmark"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignParentBottom="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/button_bookmarkl" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+			    android:id="@+id/clip_web_clip_mode_tool_area"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignParentTop="true"
+			    android:visibility="gone" >
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_exit_clip_mode"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignTop="@+id/clip_web_btn_byhand"
+			        android:layout_marginLeft="5dp"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/btn_exit" />
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_byhand"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignParentBottom="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/byhand" />
+
+			    <ImageButton
+			        android:id="@+id/clip_web_btn_cliprect"
+			        android:layout_width="45dp"
+			        android:layout_height="45dp"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:layout_toLeftOf="@+id/clip_web_btn_byhand"
+			        android:background="#00000000"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/rect" />
+
+			</RelativeLayout>
+
+			</RelativeLayout>
+			
+		</RelativeLayout>
+
+		<RelativeLayout
+		    android:id="@+id/clip_web_content_area"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_below="@+id/clip_web_tool_area"
+		    android:layout_above="@+id/clip_web_bottom_area"
+		    android:layout_centerHorizontal="true"
+		    android:orientation="vertical" >
+
+			<WebView
+			    android:id="@+id/clip_web_webview"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" />
+
+			<RelativeLayout
+			    android:id="@+id/clip_web_url_area"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentTop="true"
+			    android:layout_centerHorizontal="true"
+			    android:background="#55444444"
+			    android:padding="5dp"
+			    android:visibility="gone" >
+
+				<EditText
+				    android:id="@+id/clip_web_edittext_url"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentLeft="true"
+				    android:layout_alignParentTop="true"
+				    android:layout_toLeftOf="@+id/clip_web_btn_go"
+				    android:ems="10"
+				    android:imeOptions="actionGo"
+				    android:inputType="textUri"
+				    android:lines="1"
+				    android:maxLines="1"
+				    android:minLines="1" />
+
+				<Button
+				    android:id="@+id/clip_web_btn_go"
+				    android:layout_width="45dp"
+				    android:layout_height="45dp"
+				    android:layout_alignParentRight="true"
+				    android:layout_centerVertical="true"
+				    android:background="@drawable/button_type2"
+				    android:text="Go"
+				    android:textColor="@color/button_text"
+				    android:textSize="@dimen/button_text_size" />
+
+			</RelativeLayout>
+
+			<mo.pay.post_it.clipWeb.ClipView
+			    android:id="@+id/clip_web_clipview"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentTop="true"
+			    android:layout_centerHorizontal="true"
+			    android:background="#66333333"
+			    android:visibility="gone" />
+
+		</RelativeLayout>
+		
+		<LinearLayout
+		    android:id="@+id/clip_web_bottom_area"
+		    android:layout_width="match_parent"
+		    android:layout_height="12dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_centerHorizontal="true"
+		    android:background="@drawable/bg_bottom"
+		    android:orientation="vertical" >
+
+		</LinearLayout>
+
+			<ProgressBar
+			    android:id="@+id/edit_loading"
+			    style="?android:attr/progressBarStyleSmall"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerInParent="true"
+			    android:visibility="gone" />
+
+			<ProgressBar
+			    android:id="@+id/clip_web_progressbar"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerInParent="true"
+			    android:visibility="gone" />
+
+	</RelativeLayout>

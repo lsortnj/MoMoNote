@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/draw_setting_bg"
+    android:padding="15dp" >
+    
+    <FrameLayout
+        android:id="@+id/view_draw_highlight_stroke_area"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true">
+        
+        <mo.pay.post_it.widget.MomoStrokeView
+            android:id="@+id/view_draw_highlight_stroke"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center" />
+        
+   </FrameLayout>
+    
+    <SeekBar
+        android:id="@+id/view_draw_highlight_seekbar_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/view_draw_highlight_alpha"
+        android:layout_toRightOf="@+id/view_draw_highlight_stroke_area"
+        android:max="200"
+        android:progress="64"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seekbar_thumb" />
+
+    <LinearLayout
+        android:id="@+id/view_draw_highlight_quick_pick_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_draw_highlight_alpha"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_draw_highlight_btn_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_draw_highlight_quick_pick_area"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/view_draw_highlight_seekbar_stroke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view_draw_highlight_stroke_area"
+        android:layout_alignRight="@+id/view_draw_highlight_seekbar_alpha"
+        android:layout_alignTop="@+id/view_draw_highlight_stroke_area"
+        android:layout_toRightOf="@+id/view_draw_highlight_stroke_area"
+        android:max="35"
+        android:progress="20"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seekbar_thumb" />
+
+    <ImageView
+        android:id="@+id/view_draw_highlight_alpha"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/view_draw_highlight_stroke_area"
+        android:layout_below="@+id/view_draw_highlight_stroke_area"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/alpha" />
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/clip_web_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+
+		<RelativeLayout
+		    android:id="@+id/clip_web_tool_area"
+		    android:layout_width="match_parent"
+		    android:layout_height="80dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:background="@drawable/top_area_bg_edit" >
+
+		    <RelativeLayout
+		        android:id="@+id/clip_web_tool_icon_area"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true" >
+		    
+		    <ImageButton
+		        android:id="@+id/edit_btn_view"
+		        android:layout_width="55dp"
+		        android:layout_height="55dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginLeft="5dp"
+		        android:layout_toLeftOf="@+id/edit_btn_draw"
+		        android:background="#00000000"
+		        android:scaleType="fitCenter"
+		        android:src="@drawable/button_view" />
+		        
+			<ImageButton
+			    android:id="@+id/edit_btn_add_note_object"
+			    android:layout_width="55dp"
+			    android:layout_height="55dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_alignTop="@id/edit_btn_view"
+			    android:layout_marginLeft="5dp"
+			    android:background="#00000000"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/edit_btn_add_item" />
+
+			<ImageButton
+			    android:id="@+id/edit_btn_share"
+			    android:layout_width="55dp"
+			    android:layout_height="55dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_alignTop="@id/edit_btn_view"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:background="#00000000"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/edit_btn_share" />
+
+			<ImageButton
+			    android:id="@+id/edit_btn_draw"
+			    android:layout_width="55dp"
+			    android:layout_height="55dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignTop="@+id/edit_btn_view"
+			    android:layout_marginLeft="5dp"
+			    android:layout_toLeftOf="@+id/edit_btn_add_note_object"
+			    android:background="#00000000"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/edit_btn_draw" />
+
+			<ImageButton
+			    android:id="@+id/edit_btn_edit"
+			    android:layout_width="55dp"
+			    android:layout_height="55dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_toLeftOf="@+id/edit_btn_share"
+			    android:background="#00000000"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/button_edit"
+			    android:visibility="gone" />
+
+			<ImageButton
+			    android:id="@+id/edit_btn_del_page"
+			    android:layout_width="55dp"
+			    android:layout_height="55dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentRight="false"
+			    android:layout_toLeftOf="@id/edit_btn_view"
+			    android:background="#00000000"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/edit_btn_delete_page"
+			    android:visibility="gone" />
+
+			<ImageButton
+			    android:id="@+id/clip_web_btn_start_clip"
+			    android:layout_width="55dp"
+			    android:layout_height="55dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentLeft="true"
+			    android:background="#00000000"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/edit_btn_page_switch" />
+
+			</RelativeLayout>
+			
+		</RelativeLayout>
+
+		<RelativeLayout
+		    android:id="@+id/clip_web_content_area"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_below="@+id/clip_web_tool_area"
+		    android:layout_above="@+id/clip_web_bottom_area"
+		    android:layout_centerHorizontal="true"
+		    android:orientation="vertical" >
+
+		</RelativeLayout>
+		
+		<LinearLayout
+		    android:id="@+id/clip_web_bottom_area"
+		    android:layout_width="match_parent"
+		    android:layout_height="12dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_centerHorizontal="true"
+		    android:background="@drawable/bg_bottom"
+		    android:orientation="vertical" >
+
+		</LinearLayout>
+		
+		<ImageButton
+		    android:id="@+id/edit_btn_next_page"
+		    android:layout_width="50dp"
+		    android:layout_height="50dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentRight="true"
+		    android:layout_marginBottom="20dp"
+		    android:background="#00000000"
+		    android:src="@drawable/btn_next_page" />
+
+			<ImageButton
+			    android:id="@+id/edit_previous_page"
+			    android:layout_width="50dp"
+			    android:layout_height="50dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentLeft="true"
+			    android:layout_marginBottom="20dp"
+			    android:background="#00000000"
+			    android:src="@drawable/btn_previous_page" />
+
+			<Gallery
+			    android:id="@+id/page_switch_gallery"
+			    android:layout_width="match_parent"
+			    android:layout_height="120dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignTop="@+id/clip_web_content_area"
+			    android:background="#77555555"
+			    android:visibility="gone" />
+
+			<ProgressBar
+			    android:id="@+id/edit_loading"
+			    style="?android:attr/progressBarStyleLarge"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerInParent="true"
+			    android:visibility="gone" />
+
+	</RelativeLayout>

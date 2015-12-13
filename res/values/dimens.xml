@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_text_size">19sp</dimen>
+    <dimen name="message_text_size">18sp</dimen>
+    <dimen name="tiny_text_size">11sp</dimen>
+    <dimen name="userguide_text_size">24sp</dimen>
+    
+    <!-- AudioView -->
+    <dimen name="audio_right_area_w">140dp</dimen>
+    
+    <dimen name="audio_playicon_w">50dp</dimen>
+    <dimen name="audio_playicon_h">50dp</dimen>
+    <dimen name="audio_playicon_margin_left">20dp</dimen>
+    <dimen name="audio_playicon_margin_top">10dp</dimen>
+    
+    <dimen name="audio_title_w">90dp</dimen>
+    <dimen name="audio_title_h">10dp</dimen>
+    <dimen name="audio_title_text_size">8sp</dimen>
+    <dimen name="audio_title_margin_left">10dp</dimen>
+    <dimen name="audio_title_margin_top">15dp</dimen>
+    <dimen name="audio_title_margin_right">0dp</dimen>
+    <dimen name="audio_title_margin_bottom">0dp</dimen>
+    
+    <dimen name="audio_seek_w">130dp</dimen>
+    <dimen name="audio_seek_h">18dp</dimen>
+    <dimen name="audio_seek_margin_left">0dp</dimen>
+    <dimen name="audio_seek_margin_top">5dp</dimen>
+    <dimen name="audio_seek_margin_right">0dp</dimen>
+    <dimen name="audio_seek_margin_bottom">20dp</dimen>
+    <dimen name="audio_seek_padding_left">15dp</dimen>
+    <dimen name="audio_seek_padding_top">0dp</dimen>
+    <dimen name="audio_seek_padding_right">10dp</dimen>
+    <dimen name="audio_seek_padding_bottom">0dp</dimen>
+    <dimen name="page_switch_gallery_height">160dp</dimen>
+    
+</resources>

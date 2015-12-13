@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="transparent">#00000000</color>
+<color name="text">#5B5246</color>
+<color name="button_text">#FFFFFF</color>
+<color name="dialog_transparent">#55000000</color>
+</resources>
